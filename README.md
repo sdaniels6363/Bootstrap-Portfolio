@@ -1,2 +1,2 @@
 # Bootstrap-Portfolio
-Coding Bootcamp - Week 2 - Assignment 1
+Coding Bootcamp - Week Two - Assignment One
