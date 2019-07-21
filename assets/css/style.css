@@ -1,4 +1,6 @@
-
+body{
+  background-image: url("../img/bg.png")
+}
 
 #my-photo{
   width: 200px;
@@ -9,4 +11,3 @@
 }
 
 
-@media screen and (min-width: )
