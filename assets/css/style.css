@@ -1,3 +1,5 @@
+/* elements - least specific */
+
 body{
   color:#777777;
   font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
@@ -21,10 +23,16 @@ footer{
   font-size: 14px;
 }
 
+/* classes  */
+
 .container{
-  border: 2px solid #777777;
+  border: 2px solid #dddddd;
+  background-color: #ffffff;
 }
 
+
+
+/* ids - most specific */
 
 #my-photo{
   width: 250px;
@@ -35,3 +43,8 @@ footer{
 }
 
 
+#about-me{
+  color: #4aaaa5;
+  font-weight: bold;
+  border-bottom: 2px solid #cccccc;
+}
