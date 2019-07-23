@@ -1,5 +1,8 @@
 /* elements - least specific */
 
+html{
+  position: relative;
+}
 body{
   color:#777777;
   font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
@@ -30,6 +33,10 @@ footer{
   background-color: #ffffff;
 }
 
+.navbar-brand{
+  height: 100%;
+  background-color: #4aaaa5
+}
 
 
 /* ids - most specific */
