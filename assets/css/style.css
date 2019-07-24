@@ -14,9 +14,9 @@ body{
 }
 
 main{
-  margin-top: 100px;
   margin-bottom: 100px;
 }
+
 h1{
   color: #ffffff;
   font-family: 'Georgia', Times, Times New Roman, serif;
@@ -51,8 +51,6 @@ img{
 
 .navbar-brand{
   height: 100%;
-  background-color: #4aaaa5;
-  padding: 0px 10px;
 }
 
 .image-wrapper{
