@@ -12,7 +12,7 @@
 
   <title>Contact</title>
 </head>
-<nav class="navbar navbar-expand-sm bg-dark navbar-dark ">
+<nav class="navbar navbar-expand-md navbar-collapse bg-dark navbar-dark fixed-top">
   <a class="navbar-brand" href="index.html">Scott Daniels</a>
   <ul class="navbar-nav ml-auto">
     <li class="nav-item">
@@ -28,100 +28,97 @@
 </nav>
 
 <body>
+  <!-- main tag for content -->
 
-  <div class="container my-4 h-100">
+  <main>
+    <div class="container my-4 h-100">
 
-    <!-- row containing header -->
-    <div class="row mt-4 ">
-      <div class="col-md-12 ">
-        <h1 class="pb-4" id="about-me">Contact Me</h1>
+      <!-- row containing header -->
+      <div class="row mt-4 ">
+        <div class="col-md-12 ">
+          <h1 class="pb-4" id="about-me">Contact Me</h1>
+        </div>
       </div>
+
+      <!-- start of form -->
+      <form action="mailto:sdaniels6363@gmail.com">
+
+        <!-- row for name -->
+        <div class="row mt-3">
+          <div class="col-md-12">
+            <label for="name">Name:</label>
+          </div>
+        </div>
+
+        <!-- row for name input -->
+        <div class="row ">
+          <div class="col-md-12">
+            <input class=" border" type="text" name="fullname" placeholder="John Doe">
+          </div>
+        </div>
+
+        <!-- row for email -->
+        <div class="row mt-3">
+          <div class="col-md-4 ">
+            <label for="lname">Email Address:</label>
+          </div>
+        </div>
+
+        <!-- row for email input -->
+        <div class="row ">
+          <div class="col-md-12">
+            <input class="border" type="text" name="email" placeholder="john.doe@gmail.com">
+          </div>
+        </div>
+
+        <!-- row for subject -->
+
+        <div class="row mt-3">
+          <div class="col-md-12">
+            <label for="subject">Subject:</label>
+          </div>
+        </div>
+
+        <!-- row for subject input -->
+
+        <div class="row ">
+          <div class="col-md-12">
+            <input class="border" type="text" name="subject" placeholder="Subject">
+          </div>
+        </div>
+
+        <!-- row for message -->
+        <div class="row mt-3">
+          <div class="col-md-12">
+            <label for="message">Message:</label>
+          </div>
+        </div>
+
+        <!-- row for message input -->
+        <div class="row ">
+          <div class="col-md-12">
+            <textarea class="w-100 h-100 border" name="message"></textarea>
+          </div>
+        </div>
+
+        <!-- submit button -->
+        <div class="row my-3">
+          <div class="col-md-12">
+            <button type="button" id="submit-button">Submit</button>
+          </div>
+        </div>
+
+      </form>
+      <!-- end of form -->
+
+
+
     </div>
-
-    <!-- start of form -->
-    <form action="mailto:sdaniels6363@gmail.com">
-
-      <!-- row for name -->
-      <div class="row mt-3">
-        <div class="col-md-12">
-          <label for="name">Name:</label>
-        </div>
-      </div>
-
-      <!-- row for name input -->
-      <div class="row ">
-        <div class="col-md-12">
-          <input class=" border" type="text" name="fullname" placeholder="John Doe">
-        </div>
-      </div>
-
-
-
-      <!-- row for email -->
-      <div class="row mt-3">
-        <div class="col-md-4 ">
-          <label for="lname">Email Address:</label>
-        </div>
-      </div>
-
-      <!-- row for email input -->
-      <div class="row ">
-        <div class="col-md-12">
-          <input class="border" type="text" name="email" placeholder="john.doe@gmail.com">
-
-        </div>
-      </div>
-
-      <!-- row for subject -->
-
-      <div class="row mt-3">
-        <div class="col-md-12">
-          <label for="subject">Subject:</label>
-        </div>
-
-      </div>
-
-      <!-- row for subject input -->
-
-      <div class="row ">
-        <div class="col-md-12">
-          <input class="border" type="text" name="subject" placeholder="Subject">
-        </div>
-
-      </div>
-
-      <!-- row for message -->
-      <div class="row mt-3">
-        <div class="col-md-12">
-          <label for="message">Message:</label>
-        </div>
-      </div>
-
-      <!-- row for message input -->
-      <div class="row ">
-        <div class="col-md-12">
-          <textarea class="w-100 h-100 border" name="message"></textarea>
-        </div>
-      </div>
-
-      <!-- submit button -->
-      <div class="row my-3">
-        <div class="col-md-12">
-          <button type="button" id="submit-button">Submit</button>
-        </div>
-
-      </div>
-
-    </form>
-
-
-
-  </div>
-
+  </main>
 
 
   <!-- footer -->
-  <footer class="footer mt-auto py-3">
+  <footer class="mt-auto">
     <div class="container-fluid">
       <p>Copyright &copy;</p>
     </div>
