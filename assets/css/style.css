@@ -8,6 +8,7 @@ body{
   font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
   background-image: url(../img/bg.png);
   font-size: 18px;
+  width: 100%;
 }
 
 h1{
@@ -26,6 +27,10 @@ footer{
   font-size: 14px;
 }
 
+img{
+  object-fit: cover; /* used to crop images that exceed 200px X 200px */
+}
+
 /* classes  */
 
 .container{
@@ -35,7 +40,8 @@ footer{
 
 .navbar-brand{
   height: 100%;
-  background-color: #4aaaa5
+  background-color: #4aaaa5;
+  padding: 0px 10px;
 }
 
 .image-wrapper{
@@ -45,13 +51,17 @@ footer{
 }
 
 .text-overlay {
+  font-family: 'Georgia', Times, Times New Roman, serif;
+  font-weight: bold;
   background-color: #4aaaa5;
   color: #ffffff;
   position: absolute;
   bottom: 10px;
+  left: 0;
   text-align: center;
-  width: 100%;
-  height: 30px;
+  width: 200px;
+  height: 40px;
+  padding-top: 5px;
 }
 
 
