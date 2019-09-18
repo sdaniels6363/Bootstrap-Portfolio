@@ -1,3 +1,7 @@
+body{
+  height: 100vh;
+}
+
 header{
   text-align: center;
 }
@@ -6,9 +10,12 @@ img{
   margin-left: 0px;
 }
 
-input{
+input, textarea{
   min-width: 80%;
-  margin-left: 10%;
+}
+
+form{
+  margin: 5rem 0rem;
 }
 
 .no-decor, .no-decor:hover{
@@ -23,19 +30,50 @@ input{
   color: black;
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   font-size: 40px;
+  background-color: #555555;
+  border-left: 1px solid #000000;
+  border-right: 1px solid #000000;
+  border-top: 1px solid #000000;
 }
 
 .container{
   position: relative;
-  width: 100%;
-  height: 100%
+  height: 100%;
+  background-color: #555555;
+
 }
 
-.wrapper{
+.section.active{
   position: absolute;
   top: 80px;
   left: 0px;
+  width: 100%;
+  height: auto;
+  border: 1px solid #000000;
 
+}
+
+.section{
+  position: absolute;
+  top: 80px;
+  left: 0px;
+  width: 100%;
+  height: auto;
+  border: 1px solid #000000;
+
+}
+
+.text-overlay{
+  text-align: center;
+}
+
+.spacing{
+  /* class used on empty div to provide spacing */
+  min-height: 50px;
+}
+
+.shadow{
+  box-shadow: 3px 3px 3px #555555;
 }
 
 /* IDs */
@@ -57,25 +95,14 @@ input{
 }
 
 
-
-#nav-1, #section-1{
-  background-color: red;
-}
-
-#nav-2, #section-2{
-  background-color: yellow;
-}
-
-#nav-3, #section-3{
-  background-color: green;
-}
-
 #section-1{
   display: block;
+
 }
 #section-2{
   display: none;
 }
 #section-3{
   display: none;
+
 }

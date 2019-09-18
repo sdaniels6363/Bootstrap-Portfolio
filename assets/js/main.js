@@ -1,9 +1,33 @@
+var visibleSectionStyle = {
+  'background-color':'#777777',
+  'border': '1px solid #ffffff',
+  'display': 'block'
+}
+
+var invisibleSectionStyle = {
+  'display': 'none'
+}
+
+var activeHeadingStyle = {
+  'background-color':'#777777',
+  'border-top': '1px solid #ffffff',
+  'border-right': '1px solid #ffffff',
+  'border-left': '1px solid #ffffff',
+  'border-bottom': '2px solid #777777',
+  'display': 'block'
+}
+
+var inactiveHeadingStyle = {
+  'background-color':'#666666',
+  'border': '1px solid #ffffff',
+  'display': 'none'
+}
 
 
 $(document).ready(function () {
   console.log("ready!");
 
-  $(".slide-link").on("click", function () {
+  $(".section-link").on("click", function () {
     // modify css of heading
     var self = $(this).attr("id");
     var section = self.replace("nav-", "#section-")
