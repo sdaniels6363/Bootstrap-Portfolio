@@ -105,3 +105,14 @@ form{
   display: none;
 
 }
+
+/* attribute selector */
+[data-slide-active="yes"] {
+  /* Styles */
+  background-color: #777777;
+}
+
+[data-slide-active="no"] {
+  /* Styles */
+  background-color: #999999;
+}
