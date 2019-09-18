@@ -6,6 +6,10 @@ header{
   text-align: center;
 }
 
+main{
+  margin-bottom: 5rem;
+}
+
 img{
   margin-left: 0px;
 }
@@ -93,18 +97,6 @@ form{
   margin-right: auto;
 }
 
-
-#section-1{
-  display: block;
-
-}
-#section-2{
-  display: none;
-}
-#section-3{
-  display: none;
-
-}
 
 /* attribute selector */
 [data-slide-active="yes"] {

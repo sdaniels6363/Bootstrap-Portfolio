@@ -28,6 +28,15 @@ var inactiveHeadingStyle = {
 $(document).ready(function () {
   console.log("ready!");
 
+  // initial state, displays the page with data-slide-active set to yes
+  var sections = $(".section");
+  for (i=0; i<sections.length; i++){
+    if ($(sections[i]).attr("data-slide-active") !== "yes"){
+      var sectionID = `#${sections[i].id}`
+      $(sectionID).slideUp(1);
+    }
+  }
+
 
   $(".section-link").on("click", function () {
     // modify css of heading
@@ -51,41 +60,3 @@ $(document).ready(function () {
 
   }) 
 });
-    // switch (section) { // depending on which heading is clicked, we make that heading visible.
-    //   case "#section-1":
-    //       $("#section-1").slideDown(500);
-    //       $("#section-2").slideUp(500);
-    //       $("#section-3").slideUp(500);
-  
-    //     // $("#section-1").css("display", "block");
-    //     // $("#section-2").css("display", "none");
-    //     // $("#section-3").css("display", "none");
-    //     break;
-    //   case "#section-2":
-     
-
-
-    //     $("#section-1").slideUp(500);
-    //     $("#section-2").slideDown(500);
-    //     $("#section-3").slideUp(500);
-
-    //     // $("#section-1").css("display", "none");
-    //     // $("#section-2").css("display", "block");
-    //     // $("#section-3").css("display", "none");
-    //     break;
-    //   case "#section-3":
-    //       $("#section-1").slideUp(500);
-    //       $("#section-2").slideDown(500);
-    //       $("#section-3").slideDown(500);
-  
-    //     // $("#section-1").css("display", "none");
-    //     // $("#section-2").css("display", "none");
-    //     // $("#section-3").css("display", "block");
-    //     break;
-    // }
-
-//   });
-
-
-
-// });
