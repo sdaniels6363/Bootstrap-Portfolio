@@ -1,92 +1,130 @@
-/* elements - least specific */
-
-html {
-  position: relative;
-  min-height: 100%;
+body{
+  height: 100vh;
+  background-image: url("../img/bg.png");
 }
 
-body{
-  color:#777777;
-  font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
-  background-image: url(../img/bg.png);
-  font-size: 18px;
-  width: 100%;
+header{
+  text-align: center;
 }
 
 main{
-  margin-bottom: 100px;
-}
-
-h1{
-  color: #ffffff;
-  font-family: 'Georgia', Times, Times New Roman, serif;
-}
-p {
-  line-height: 24px;
-}
-
-footer{
-  color: #ffffff;
-  background-color:#666666;
-  border-top: 8px solid #4aaaa5;
-  text-align: center;
-  font-size: 14px;
-  position: absolute;
-  height: 60px;
-  line-height: 60px;
-  width: 100%;
-  bottom: 0;
+  margin-bottom: 5rem;
 }
 
 img{
-  object-fit: cover; /* used to crop images that exceed 200px X 200px */
+  margin-left: 0px;
 }
 
-/* classes  */
+
+.no-decor, .no-decor:hover{
+  text-decoration: none;
+  color: #000000;
+}
+
+.menu-heading{
+  padding-top: 10px;
+  min-height: 80px;
+  text-align: center;
+  color: black;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 40px;
+  border-left: 1px solid #000000;
+  border-right: 1px solid #000000;
+  border-top: 1px solid #000000;
+}
 
 .container{
-  border: 2px solid #dddddd;
-  background-color: #ffffff;
+  position: relative;
+  height: 100%;
+  width: auto;
 }
 
-.navbar-brand{
-  height: 100%;
+.section{
+  position: absolute;
+  background-color: #ffffff;  
+  top: 80px;
+  left: 0px;
+  width: 100%;
+  height: auto;
+  padding: 5px;
+  border-left: 1px solid #000000;
+  border-right: 1px solid #000000;
+  border-bottom: 1px solid #000000;
+}
+
+/* .text-overlay{
+  text-align: center;
+} */
+
+
+.project-wrapper{
+  height: auto;
+  width: auto;
+  margin: 0;
+  padding: 0;
 }
 
 .image-wrapper{
-  position: relative;
-  width: 200px;
-  height: 200px;
+  margin-top: auto;
+  margin-bottom: auto;
 }
 
-.text-overlay {
-  font-family: 'Georgia', Times, Times New Roman, serif;
-  font-weight: bold;
-  background-color: #4aaaa5;
-  color: #ffffff;
-  position: absolute;
-  bottom: 10px;
-  left: 0;
-  text-align: center;
-  width: 200px;
-  height: 40px;
-  padding-top: 5px;
-}
+/* IDs */
 
-
-/* ids - most specific */
-
+/* Photo IDs */
 #my-photo{
-  width: 250px;
+  min-height: 300px;
+  max-height: 300px;
+  min-width: 300px;
+  max-width: 300px;
+  border: 1px solid #000000;
 }
 
 #trophy-lift{
-  width: 680px;
+  display: block;
+  max-width: 700px;
+  min-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
+/* media queries */
+@media screen and (max-width: 990px) {
+  #my-photo{
+    min-height: 200px;
+    max-height: 200px;
+    min-width: 200px;
+    max-width: 200px;
+  }
+}
+@media screen and (max-width: 768px) {
 
-#about-me{
-  color: #4aaaa5;
-  font-weight: bold;
-  border-bottom: 2px solid #cccccc;
+  
+  p{
+    text-align: justify;
+  }
+  img{
+    display: flex;
+    margin-right: auto;
+    margin-left:auto;
+  }
+
+  h4{
+    text-align: center;
+  }
+  .section{
+    top:240px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .proj-desc{
+    padding: 0;
+  }
+
+  #my-photo{
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+  }
 }
