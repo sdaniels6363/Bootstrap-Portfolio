@@ -1,28 +1,21 @@
-var visibleSectionStyle = {
-  'background-color':'#777777',
-  'border': '1px solid #ffffff',
-  'display': 'block'
-}
-
-var invisibleSectionStyle = {
-  'display': 'none'
-}
-
 var activeHeadingStyle = {
-  'background-color':'#777777',
-  'border-top': '1px solid #ffffff',
-  'border-right': '1px solid #ffffff',
-  'border-left': '1px solid #ffffff',
-  'border-bottom': '2px solid #777777',
-  'display': 'block'
+  'background-color':'rgb(97, 94, 94, 0.75)',
+  'border-top': '1px solid #000000',
+  'border-right': '1px solid #000000',
+  'border-left': '1px solid #000000',
+  'border-bottom':'none',
+  'z-index': '2',
 }
 
 var inactiveHeadingStyle = {
-  'background-color':'#666666',
-  'border': '1px solid #ffffff',
-  'display': 'none'
+  'background-color':'rgb(159, 160, 161)',
+  'border': '1px solid #000000',
+  'z-index':'0',
 }
 
+var activeSlide = {
+  'background-color':'rgb(97, 94, 94, 0.75)',
+}
 
 
 $(document).ready(function () {
@@ -31,9 +24,15 @@ $(document).ready(function () {
   // initial state, displays the page with data-slide-active set to yes
   var sections = $(".section");
   for (i=0; i<sections.length; i++){
+    var sectionID = `#${sections[i].id}`
+    var navID = sectionID.replace("#section-","#nav-");
     if ($(sections[i]).attr("data-slide-active") !== "yes"){
-      var sectionID = `#${sections[i].id}`
+      $(navID).css(inactiveHeadingStyle);
       $(sectionID).slideUp(1);
+    } else {
+      $(navID).css(activeHeadingStyle);
+      $(sectionID).css(activeSlide);
+      $(sectionID).slideDown(1);
     }
   }
 
@@ -41,21 +40,23 @@ $(document).ready(function () {
   $(".section-link").on("click", function () {
     // modify css of heading
     self = $(this).attr("id");
-    newSection = self.replace("nav-", "#section-")
+    newSection = self.replace("nav-", "#section-");
+    $(`#${self}`).css(activeHeadingStyle);
 
     var sections = $(".section");
     for (i=0; i<sections.length; i++){
       if ($(sections[i]).attr("data-slide-active") === "yes"){
         var sectionID = `#${sections[i].id}`
+        var navID = sectionID.replace("#section-","#nav-")
         $(sectionID).attr("data-slide-active","no");
         $(sectionID).slideUp(500);
-
+        $(navID).css(inactiveHeadingStyle);
       }
     }
     setTimeout(function(){
       $(newSection).attr("data-slide-active","yes");
+      $(newSection).css(activeSlide);
       $(newSection).slideDown(500);
-  
     },500);
 
   }) 
